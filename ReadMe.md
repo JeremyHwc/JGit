@@ -91,7 +91,7 @@ git log:
 git add -u：将文件的修改、文件的删除，添加到暂存区。
 git add .：将文件的修改，文件的新建，添加到暂存区。
 git add -A：将文件的修改，文件的删除，文件的新建，添加到暂存区。
-工作中一般是用到 git add . 或者 git add -A, 今天学习更进一步解了 git add -u 以及他们之间的区别，谢谢苏玲老师讲的很详细
+工作中一般是用到 git add . 或者 git add -A, 今天学习更进一步解了 git add -u 以及他们之间的区别
 
 git add -A相对于git add -u命令的优点 ： 可以提交所有被删除、被替换、被修改和新增的文件到数据暂存区，而git add -u 只能操作跟踪过的文件
 git add -A 等同于git add -all
