@@ -138,10 +138,35 @@ gitk 后面可以跟上文件的路径， 这样能看单个文件的修改历�
 ```
 
 ### 09 填充.git目录
+```text
+1. cat命令主要用来查看文件内容，创建文件，文件合并，追加文件内容等功能。
+cat HEAD 查看HEAD文件的内容 
+git cat-file 命令 显示版本库对象的内容、类型及大小信息。
+git cat-file -t b44dd71d62a5a8ed3 显示版本库对象的类型
+git cat-file -s b44dd71d62a5a8ed3 显示版本库对象的大小
+git cat-file -p b44dd71d62a5a8ed3 显示版本库对象的内容
+
+HEAD：指向当前的工作路径
+config：存放本地仓库（local）相关的配置信息。
+refs/heads:存放分支
+refs/tags:存放tag，又叫里程牌 （当这次commit是具有里程碑意义的 比如项目1.0的时候 就可以打tag）
+objects：存放对象 .git/objects/ 文件夹中的子文件夹都是以哈希值的前两位字符命名 每个object由40位字符组成，前两位字符用来当文件夹，后38位做文件。
+```
 
 ### 10 commit、tree和blob三个对象之间的关系
+![](/images/commit_tree_blob_relation.jpg)
+git cat-file -p "file名称或者blob、commit、tree的hash值"：查看内容
+
+### 11 数一数tree的个数
+> 新建的Git库，有且仅有1个commit，仅仅包含/doc/readme，请问内含多少个tree，多少个blob？
+![](/images/count_tree.jpg)
+
+### 12 分离头指针情况下的注意事项
+
+### 13 进一步理解HEAD和Branch
 
 
 ## 独自使用Git时的常见场景
+
 
 ### 1. 怎么删除不需要的分支？
