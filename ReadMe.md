@@ -165,8 +165,52 @@ git cat-file -p "file名称或者blob、commit、tree的hash值"：查看内容
 
 ### 13 进一步理解HEAD和Branch
 
+HEAD其实最终的指向都是指向一个具体的commit;  
+1 一个节点，可以包含多个子节点（checkout 出多个分支）  
+2 一个节点可以有多个父节点（多个分支合并）    
+3 ^是~都是父节点，区别是跟随数字时候，^2 是第二个父节点，而~2是父节点的父节点  
+4 ^和~可以组合使用,例如 HEAD~2^2  
 
-## 独自使用Git时的常见场景
+
+> git diff :比较分支的区别
+
+
+## 第二章 独自使用Git时的常见场景
 
 
 ### 1. 怎么删除不需要的分支？
+> git branch -d branch_name
+
+### 2. 怎么修改最新commit的message？
+
+> git commit --amend
+
+```
+1、git log --oneline -5
+
+    查看最近5次commit的简要信息，输出信息为：简短commitID commit_message，可以根据需要查看最近n次的提交
+
+    也可以git log -5，输出信息相对详细些，commitID为完整的，这里只需要加上参数--oneline查看简短commitID即可
+
+2、git rebase -i <简短commitID>
+
+    如果需要修改从上往下第2个commit_message，这里的简短commitID为上面输出信息的第3个，以此类推
+
+    在弹出的窗口中，以VIM编辑方式显示了最近两次的提交信息
+
+3、（按照VIM操作）按i键，进入编辑模式，将想要修改的提交前的pick改为reword，如果需要修改多个，也可以将对应的多个pick改为reword
+
+4、（按照VIM操作）按ESC键        再按 shift + :        然后输入wq（w是保存，q是退出）        按回车键
+
+5、在弹出的窗口中，按i进入编辑模式，就可以修改commit_message了
+
+6、（按照VIM操作）按ESC键        再按 shift + :        然后输入wq（w是保存，q是退出）        按回车键（同第4步）
+
+    如果第3步中修改了多个pick为reword，则会多次弹出修改界面，重复第5~6步即可
+
+7、再使用第1步的命令查看一下修改结果，git log --oneline -5或者git log -5，查看修改是否已经完成
+
+8、最后强制push上去git push --force
+```
+
+### 3. 怎么修改老舅commit的message？
