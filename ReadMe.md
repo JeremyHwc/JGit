@@ -154,12 +154,12 @@ objects：存放对象 .git/objects/ 文件夹中的子文件夹都是以哈希�
 ```
 
 ### 10 commit、tree和blob三个对象之间的关系
-![](/images/commit_tree_blob_relation.jpg)
+![](/images/commit_tree_blob_relation.jpg)  
 git cat-file -p "file名称或者blob、commit、tree的hash值"：查看内容
 
 ### 11 数一数tree的个数
 > 新建的Git库，有且仅有1个commit，仅仅包含/doc/readme，请问内含多少个tree，多少个blob？
-![](/images/count_tree.jpg)
+![](/images/count_tree.jpg)  
 
 ### 12 分离头指针情况下的注意事项
 
@@ -213,4 +213,4 @@ HEAD其实最终的指向都是指向一个具体的commit;
 8、最后强制push上去git push --force
 ```
 
-### 3. 怎么修改老舅commit的message？
+### 3. 怎么修改老旧commit的message？
