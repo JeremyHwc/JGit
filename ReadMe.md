@@ -213,3 +213,4 @@ HEAD其实最终的指向都是指向一个具体的commit;
 8、最后强制push上去git push --force
 ```
 
+### 4. 怎样把连续的多个commit整理成1个？
