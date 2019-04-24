@@ -137,6 +137,7 @@ gitk:开启图形界面查看版本管理界面
 gitk 后面可以跟上文件的路径， 这样能看单个文件的修改历史的具体内容。
 ```
 
+<<<<<<< HEAD
 ### 09 填充.git目录
 ```text
 1. cat命令主要用来查看文件内容，创建文件，文件合并，追加文件内容等功能。
@@ -154,14 +155,20 @@ objects：存放对象 .git/objects/ 文件夹中的子文件夹都是以哈希�
 ```
 
 ### 10 commit、tree和blob三个对象之间的关系
+<<<<<<< HEAD:ReadMe.md
 ![](/images/commit_tree_blob_relation.jpg)  
-
+=======
+![](/images/commit_tree_blob_relation.jpg)
+>>>>>>> 8a59b0fb2eeab15d265ccb9c775f3b6e295dbcef:ReadMe.md
 git cat-file -p "file名称或者blob、commit、tree的hash值"：查看内容
 
 ### 11 数一数tree的个数
 > 新建的Git库，有且仅有1个commit，仅仅包含/doc/readme，请问内含多少个tree，多少个blob？
+<<<<<<< HEAD:ReadMe.md
+![](/images/count_tree.jpg)  
+=======
 ![](/images/count_tree.jpg)
-
+>>>>>>> 8a59b0fb2eeab15d265ccb9c775f3b6e295dbcef:ReadMe.md
 
 ### 12 分离头指针情况下的注意事项
 
@@ -172,8 +179,25 @@ HEAD其实最终的指向都是指向一个具体的commit;
 2 一个节点可以有多个父节点（多个分支合并）    
 3 ^是\~都是父节点，区别是跟随数字时候，^2 是第二个父节点，而\~2是父节点的父节点  
 4 ^和\~可以组合使用,例如 HEAD\~2^2  
+<<<<<<< HEAD:ReadMe.md
+=======
 
 
+> git diff :比较分支的区别
+
+
+## 第二章 独自使用Git时的常见场景
+
+
+### 1. 怎么删除不需要的分支？
+> git branch -d branch_name
+
+### 2. 怎么修改最新commit的message？
+>>>>>>> 8a59b0fb2eeab15d265ccb9c775f3b6e295dbcef:ReadMe.md
+
+> git commit --amend
+
+<<<<<<< HEAD:ReadMe.md
 > git diff :比较分支的区别
 
 
@@ -217,3 +241,12 @@ HEAD其实最终的指向都是指向一个具体的commit;
 
 ### 4. 怎样把连续的多个commit整理成1个？
 
+
+=======
+### 10 commit、tree和blob三个对象之间的关系
+
+
+## 独自使用Git时的常见场景
+
+### 1. 怎么删除不需要的分支？
+>>>>>>> e403004... 整合readme相关的所有commit
