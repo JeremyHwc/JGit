@@ -182,7 +182,7 @@ HEAD其实最终的指向都是指向一个具体的commit;
 > git branch -d branch_name
 
 ### 2. 怎么修改最新commit的message？
-
+### 3. 怎么修改老旧commit的message？
 > git commit --amend
 
 ```
@@ -213,4 +213,3 @@ HEAD其实最终的指向都是指向一个具体的commit;
 8、最后强制push上去git push --force
 ```
 
-### 3. 怎么修改老旧commit的message？
